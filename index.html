@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rick & Morty</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body>
+        <div class="top">
+            <!-- top image for Rick and Morty -->
+        </div>
+
+        <nav> 
+            <!-- navigation  -->
+            <div class="nav-list">
+                <ul><meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <li><span>KIAMA</span></li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+
+            <!-- dark mode and light mode  -->
+            <div  id="light"> 
+                <button id="light-dark">
+                    <img src="images/night-mode.png" alt="">
+                </button>
+            </div>
+        </nav>
+
+        <!-- 1st section  -->
+        <section id="episode-container">
+            <h1>Episodes Section</h1>
+            <select id="page1-list">
+                <!-- for page 1 options  -->
+            </select>
+            <select id="page2-list">
+                <!-- for page 2 options  -->
+            </select>
+            <select id="page3-list">
+                <!-- for page 3 options  -->
+            </select>
+            
+            <div id="episode-display">
+                <!-- displays details of chosen episode  -->
+            </div>
+        </section>
+
+        <!-- 2nd section  -->
+        <section id="character-container">
+            <h1 id="char-section">Characters Section</h1>
+            <div id="character-list">
+                <!-- Where the characters are displayed -->
+                 <!-- their details are hidden till clicked  -->
+            </div>
+
+            <!-- buttons to take you to different pages  -->
+            <div class="character-page-buttons">
+                <button id="character-page1">1</button>
+                <button id="character-page2">2</button>
+                <button id="character-page3">3</button>
+                <button id="character-page4">4</button>
+                <button id="character-page5">5</button>
+                <button id="character-page6">6</button>
+            </div>
+        </section>
+
+        <section class="footer">
+            <ul>
+                <li>
+                    <img src="./images/insta.png" alt="insta" >
+                </li>
+                <li>
+                    <img src="./images/facebook.png" alt="facebook" >
+                </li>
+                <li>
+                    <img src="./images/twitter.png" alt="twitter" >
+                </li>
+                <li>
+                    <img src="./images/tiktok.png" alt="tiktok" >
+                </li>
+            </ul>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>

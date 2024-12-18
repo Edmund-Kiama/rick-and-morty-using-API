@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+/* the hidden class */
+.hidden{
+    display: none;
+}
+/* top section  */
+.top{
+    background-image: url('https://i.pinimg.com/736x/2e/6d/81/2e6d81a89747ea24db6b684b27b8c1b6.jpg');
+    background-size: cover;    
+    background-position: center;  
+    background-repeat: no-repeat; 
+    height: 150px;             
+}
+/* top image  */
+.top img {
+    float: left;
+    width: 150px;
+}
+/* the body  */
+body{
+    background-color: rgb(235, 235, 235);
+} 
+/* the nav  */
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #193111;
+    padding: 10px;
+    padding-bottom: 5px;
+}
+  /* dark-light button  */
+#light img{
+    width: 20px;
+}
+#light button {
+    border-radius: 100px;
+    border: none;
+    background: #b3ff6b;
+    transition: 0.3s;
+    cursor: pointer;
+}
+#light button:hover {
+    background-color: #f5db4c;
+}
+ /* kiama home about...  */
+.nav-list {
+    display: flex;
+}
+.nav-list span{
+    font-weight: bold;
+    color: black;
+    background-color: #8bc3e6;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 5px;
+    border: 1px solid #f5db4c;
+}
+.nav-list span:hover {
+    background-color: #f5db4c;
+}
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    float: left;
+    color: white;
+}
+/* nav li  */
+ul li{
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ul li:hover {
+    color: #f5db4c;
+    font-weight: bolder;
+}
+/* select for the pages  */
+select {
+    width: 200px;
+    cursor: pointer;
+    background: white;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    transition: 0.3s; 
+}
+select:hover {
+    border: 2px solid black;
+    background-color: #b3ff6b41;
+}
+/* main episode container  */
+#episode-container {
+    background-color: rgb(235, 235, 235);
+    margin: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 216, 216);
+}
+/* displays episode selected  */
+#episode-display {
+    background-color: white;  
+    padding-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+/* name and date aired  */
+#display-container p {
+    /* color: black; */
+    height: 25px;
+}
+/* //images on section 1  */
+.character-image-dropmenu {
+    width: 50px;
+}
+/* characters involved in the episode  */
+.char-div{
+    margin-top: 15px;
+    padding-top: 5px;
+}
+.char-div h4 {
+    padding-bottom: 10px;
+}
+/* holds the image  */
+#main-image-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+ /* character div container  */
+.character-div-container {
+    background-color:  #4CAF50;
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(0, 0, 0, 0.192);
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-right: 10px;
+}
+.character-div-container:hover {
+    border: 2px solid #f5db4c;
+}
+            /* SECTION 2 */
+/* main containeR*/
+.main-container {
+    display: flex;
+    background-color: #b3ff6b;
+    margin: 5px;
+    border: 1px solid #f5db4c;
+    border: 5px solid rgb(235, 235, 235);;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.main-container:hover {
+    border: 5px solid #fadb2c;
+}
+/* displays list on characters*/
+#character-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#character-list span {
+    color: rgb(70, 70, 70);
+    font-weight: lighter;
+}
+/* contains hidden details of image*/
+.details-container {
+    padding: 5px;
+    padding-left: 10px;
+    text-align: center;
+    align-items: center;
+    line-height: 40px;
+}
+/* main image  */
+.char-image{
+    border: 1px solid black;
+    cursor: pointer;
+}
+/* name of character  */
+.char-name {
+    font-size: 20px;
+    font-weight: bolder;
+}
+/* contains page buttons  */
+.character-page-buttons {
+    padding: 20px;
+}
+.character-page-buttons button {
+    margin: 10px;
+    width: 30px;
+    background:  rgb(235, 235, 235);
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.character-page-buttons button:hover {
+    background: #b3ff6b;
+}
+.character-page-buttons button:hover {
+    background: #b3ff6b;
+}
+/* footer section  */
+.footer ul{
+    float: right;
+     list-style: none;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     margin-right: 20px; 
+}
+.footer img {
+    width: 20px;
+}
