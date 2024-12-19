@@ -226,3 +226,29 @@ select:hover {
 .footer img {
     width: 20px;
 }
+#favorite {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#like ,
+#unlike{
+    display: flex;
+    justify-content: flex-end;
+}
+#like button {
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: rgb(255, 149, 149);
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#unlike button {
+    margin-right: 20px;
+    margin-top: 10px;
+    background-color: #8bc3e6;
+    border-radius: 5px;
+    border: 1px solid black;
+}

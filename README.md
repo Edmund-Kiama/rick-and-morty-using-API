@@ -202,6 +202,15 @@ It first creates elements for character image and details (name, gender, species
 It then appends these elements to the main character container.
 Finally a click event listener is added to toggle the visibility of the character's details.
 
+#### **2.3 addsToFavorite(char)**
+The function takes in an object that was passed from an event click listener of like.
+The function appends the object received to a favoriteArray list and creates elements for it to be appended in the DOM.
+
+#### **2.4 removesFromFavorite(char)**
+The function takes in an object that was passed from an event click listener of unlike.
+The function pops the object from a favoriteArray list and removes its elements from the DOM.
+
+
 ### **3. Utility functions**
 
 #### **3.1 toggleModes()**

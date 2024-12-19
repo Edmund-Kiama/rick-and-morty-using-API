@@ -2,6 +2,7 @@
 const URL = 'https://rickandmortyapi.com/api/';
 let episodeUrl = 'episode';
 let characterUrl = 'character';
+let favoriteArray = [];
 
 //targets elements in the DOM
 let page1List = document.getElementById('page1-list');
@@ -19,6 +20,7 @@ let characterPage6 = document.querySelector('#character-page6');
 let mode = document.getElementById('light-dark');
 let episodeContainer = document.getElementById('episode-container');
 let charSection = document.getElementById('char-section');
+let favorite = document.getElementById('favorite')
 
                     // DOM EVENT LISTENER 
 //Event listener for when the DOM is loaded
@@ -245,6 +247,11 @@ function createTheCharacters(char) {
     let location = document.createElement('p');
     let origin = document.createElement('p');
 
+    //creates a button for like
+    let likeDiv = document.createElement('div')
+    likeDiv.id = 'like'
+    let like = document.createElement('button')
+
     //fills the created elements with content
     charName.textContent = `${char. name}`;
     gender.innerHTML = `<span>Gender:</span>${char. gender}`;    
@@ -253,14 +260,18 @@ function createTheCharacters(char) {
     species.innerHTML = `<span>Species: </span>${char. species}`;    
     status.innerHTML = `<span>Status: </span>${char. status}`;  
     charImage.src = `${char. image}`;
+    like.textContent = 'like'
+   
    
     //appends elements to their respective elements
+    likeDiv.append(like)
     detailsContainer.append(charName);
     detailsContainer.append(gender);
     detailsContainer.append(species);
     detailsContainer.append(status);
     detailsContainer.append(location);
     detailsContainer.append(origin);
+    detailsContainer.append(likeDiv);
 
     //appends to the major container elements
     mainContainer.append(charImage);
@@ -271,7 +282,82 @@ function createTheCharacters(char) {
     charImage.addEventListener('click',()=>{
         detailsContainer.classList.toggle('hidden');
     });
+    like.addEventListener('click', () => {
+        addsToFavorite(char);
+    })    
 };
+
+function addsToFavorite (char) {
+    favoriteArray.push(char)
+    //for container
+    let mainContainer = document.createElement('div');
+    mainContainer.classList.add('main-container');
+    mainContainer.id = `${char. id}`
+    
+    //for image
+    let charImage = document.createElement('img');
+    charImage.classList.add('char-image');
+    
+    //for details div
+    let detailsContainer = document.createElement('div');
+    detailsContainer.classList.add('details-container');
+    // detailsContainer.classList.add('hidden');
+    
+    //for character name
+    let charName = document.createElement('p');
+    charName.classList.add('char-name');
+    
+    //for gender, species,status,location, origin
+    let gender = document.createElement('p');
+    let species = document.createElement('p');
+    let status = document.createElement('p');
+    let location = document.createElement('p');
+    let origin = document.createElement('p');
+    
+    //creates a button for unlike
+    let unLikeDiv = document.createElement('div')
+    unLikeDiv.id = 'unlike'
+    let unlike = document.createElement('button')
+    
+    //fills the created elements with content
+    charName.textContent = `${char.name}`;
+    gender.innerHTML = `<span>Gender:</span>${char. gender}`;    
+    location.innerHTML = `<span>Location: </span>${char. location.name}`;    
+    origin.innerHTML = `<span>Origins:</span> ${char. origin.name}`;
+    species.innerHTML = `<span>Species: </span>${char. species}`;    
+    status.innerHTML = `<span>Status: </span>${char. status}`;  
+    charImage.src = `${char. image}`;
+    unlike.textContent = 'unlike'
+       
+   
+    //appends elements to their respective elements
+    unLikeDiv.append(unlike)
+    detailsContainer.append(charName);
+    detailsContainer.append(gender);
+    detailsContainer.append(species);
+    detailsContainer.append(status);
+    detailsContainer.append(location);
+    detailsContainer.append(origin);
+    detailsContainer.append(unLikeDiv);
+    
+    //appends to the major container elements
+    mainContainer.append(charImage);
+    mainContainer.append(detailsContainer);
+    favorite.append(mainContainer);
+
+    //listens for unlike
+    unlike.addEventListener('click', () => {
+        removesFromFavorite(char);
+    }) 
+}
+//removes from favorite section
+function removesFromFavorite (char) {
+    let divToRemove = document.getElementById(`${char .id}`) 
+    let toBeRemoved = favoriteArray.find(arr => arr.id === char. id);
+
+    favoriteArray.pop(toBeRemoved);     //removes from array list
+    divToRemove.remove();               //removes fromDOM
+}
             //PAGE BUTTON EVENT LISTENERS
 //event listener for the character pages buttons
 //for page 1
