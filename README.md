@@ -1,4 +1,4 @@
-# Rick and Morty API Explorer
+# Rick and Morty API
 
 ## Introduction
 
