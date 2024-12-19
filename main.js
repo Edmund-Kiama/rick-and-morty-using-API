@@ -251,6 +251,7 @@ function createTheCharacters(char) {
     let likeDiv = document.createElement('div')
     likeDiv.id = 'like'
     let like = document.createElement('button')
+    like.id = `likeButton${char .id}`
 
     //fills the created elements with content
     charName.textContent = `${char. name}`;
@@ -284,6 +285,7 @@ function createTheCharacters(char) {
     });
     like.addEventListener('click', () => {
         addsToFavorite(char);
+        like.disabled = true;
     })    
 };
 
@@ -348,6 +350,8 @@ function addsToFavorite (char) {
     //listens for unlike
     unlike.addEventListener('click', () => {
         removesFromFavorite(char);
+        let unlikeRemove = document.getElementById(`likeButton${char .id}`)
+        unlikeRemove.disabled = false;
     }) 
 }
 //removes from favorite section
