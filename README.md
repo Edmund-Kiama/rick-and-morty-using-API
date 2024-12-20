@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A JavaScript-based web application project that interacts with  a [Rick and Morty API](https://rickandmortyapi.com/) to display information in 2 sections.
+A JavaScript-based web application project that interacts with  a [Rick and Morty API](https://rickandmortyapi.com/) to display information in 3 sections.
 
 The first section displays information of episode chosen from a select option input field.
 Such information include;
@@ -18,6 +18,17 @@ Such information include;
     -status
     -location
     -origins. 
+    -a like button
+
+The third section displays information of various characters you liked in the second character display section.
+Such information include; 
+    -character name
+    -gender
+    -species
+    -status
+    -location
+    -origins. 
+    -an unlike button
 
 ## Table of content
 1. Features
@@ -141,8 +152,13 @@ Under the "Characters" section, there are six page buttons are available:
     -**Page 5**
     -**Page 6**
 You are required to click on a page button to load the respective set of characters.
+For each character there is a like button which when clicked places the character liked into the favorite section.
 
-### **3. Switching themes**
+### **3. Selecting favorites**
+Once a character is liked, they are displayed in the favorite section.
+Here you can view your favorite characters selected as well as remove them from the favorite list.
+
+### **4. Switching themes**
 
 #### **Step 1: Light/Dark Mode Toggle**
 A button for switching dark/light mode is provided at the top right button
@@ -208,7 +224,7 @@ The function appends the object received to a favoriteArray list and creates ele
 
 #### **2.4 removesFromFavorite(char)**
 The function takes in an object that was passed from an event click listener of unlike.
-The function pops the object from a favoriteArray list and removes its elements from the DOM.
+The function pops the object from a favoriteArray list and removes its elements from` the DOM.
 
 
 ### **3. Utility functions**
