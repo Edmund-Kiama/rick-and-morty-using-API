@@ -98,6 +98,8 @@ It displays user-friendly error messages for failed data fetches.
 2. CSS
 3. JavaScript
 4. Rick and Morty API ---> (https://rickandmortyapi.com/)
+5. Docker
+6. Nginx
 
 ## Project structure
 
@@ -105,12 +107,26 @@ It displays user-friendly error messages for failed data fetches.
 2. **`style.css`**: Provides styling for the application.
 3. **`script.js`**: Main JavaScript file that handles data fetching, DOM manipulation, and event handling.
 4. **`images folder`**: contains images used in the project
+5. 5. **`Docker file`**: Contains configuration for deploying the app using Nginx
 
-## Installation
-  
+## **Installation**
+**1. Without Docker**
 To get access to the codes, you could fork and clone the repository using:
 --->git clone 
 Afterwards, navigate to the project folder and go live with the index.html file in your preferred browser.
+**2. With Docker**
+This project includes a Dockerfile for serving the application using Nginx. To run the project using Docker, follow these steps:
+
+- Build the Docker Image:
+    ```ssh
+    docker build -t rick-and-morty-app .
+    ```
+- Run the Docker Container:
+    ```ssh
+    docker run -p 80:80 --name mycontainer1 rick-morty-app
+    ```
+- Access the App:   
+Open `http://localhost` in your browser.
 
 ## How to use
 
