@@ -111,21 +111,35 @@ It displays user-friendly error messages for failed data fetches.
 
 ## **Installation**
 **1. Without Docker**
-To get access to the codes, you could fork and clone the repository using:
---->git clone 
-Afterwards, navigate to the project folder and go live with the index.html file in your preferred browser.
-**2. With Docker**
-This project includes a Dockerfile for serving the application using Nginx. To run the project using Docker, follow these steps:
+- To get access to the codes, you could fork and clone the repository using.
+- Afterwards, navigate to the project folder and go live with the index.html file in your preferred browser.
+            
+**2. With Docker Build**
+- This project includes a Dockerfile for serving the application using Nginx. To run the project using Docker, follow these steps:
 
 - Build the Docker Image:
     ```ssh
-    docker build -t rick-and-morty-app .
+    docker build -t rick-and-morty .
     ```
 - Run the Docker Container:
     ```ssh
-    docker run -p 80:80 --name mycontainer1 rick-morty-app
+    docker run -p 80:80 --name mycontainer1 rick-and-morty
     ```
 - Access the App:   
+Open `http://localhost` in your browser.
+
+**3. Pull Docker Image**
+- You can also pull the image from `edmundkiama/rick-and-morty`
+- To pull the image, follow these steps:
+    ```ssh
+    docker pull edmundkiama/rick-and-morty:latest
+    ```
+    - pull the image from my docker hub
+    ```ssh
+     docker run -p 80:80 --name mycontainer1 edmundkiama/rick-and-morty:latest
+     ```
+     - run the image by containerizing it
+-  Access the App:   
 Open `http://localhost` in your browser.
 
 ## How to use
